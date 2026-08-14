@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff8fb">
+  <title>Teacher Calendar</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="fixes.css">
+  <link rel="stylesheet" href="public.css">
+  <style>[hidden]{display:none!important}</style>
+</head>
+<body class="logged-out">
+  <main class="app">
+    <aside class="side">
+      <div class="logo"><b>✦</b><strong>Teacher<small>calendar</small></strong></div>
+      <button class="primary" id="addLesson">＋ Новый урок</button>
+      <nav>
+        <button class="active">▦ Календарь</button>
+        <button id="showHomework" hidden>◇ Домашние задания <i id="taskCount">0</i></button>
+        <button id="showDebt" hidden>◉ Не оплачено <i id="debtCount">0</i></button>
+      </nav>
+      <div class="pretty-card"><span>✿</span><div><b>Lovely schedule</b><small>Пусть день складывается красиво</small></div><i>✦</i></div>
+      <div class="cloud" id="cloudState">Демо-режим · данные в браузере</div>
+      <button class="login" id="loginButton">Войти через Google</button>
+    </aside>
+    <section class="main">
+      <header>
+        <div class="nav"><button id="prev">‹</button><button id="next">›</button><h1 id="monthTitle"></h1><button id="today">Сегодня</button></div>
+        <div class="header-actions"><button id="homeworkTop" hidden>＋ Домашнее задание</button><button class="login-top" id="loginTop">Войти</button></div>
+        <div class="clocks"><span><small id="zoneLabel"></small><b id="localClock"></b></span><button id="zoneMinus">−</button><button id="zonePlus">＋</button><em></em><span><small>Москва · MSK</small><b id="mskClock"></b></span></div>
+      </header>
+      <div class="week"><b>ПН</b><b>ВТ</b><b>СР</b><b>ЧТ</b><b>ПТ</b><b>СБ</b><b>ВС</b></div>
+      <div class="calendar" id="calendar"></div>
+    </section>
+    <aside class="rail">
+      <div class="rail-title"><h2>Задания</h2><button id="addTask" hidden>＋</button></div>
+      <p class="eyebrow">ДОМАШНИЕ ЗАДАНИЯ</p>
+      <div id="taskList" class="task-list"></div>
+      <button class="text-btn" id="addTask2">＋ Добавить задание</button>
+      <div class="money" id="financePanel" hidden><small id="financeTitle">Сумма за месяц</small><strong id="debtTotal">Br 0</strong><span id="debtCaption"></span><button id="showDebt2">Посмотреть неоплаченные</button></div>
+    </aside>
+  </main>
+  <div class="overlay hidden" id="overlay"><section class="modal"><button class="close" id="closeModal">×</button><div id="modalContent"></div></section></div>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
