@@ -1,0 +1,38 @@
+.top-finance {
+  margin: 0;
+  min-width: 190px;
+  padding: 10px 13px;
+  border-radius: 13px;
+  gap: 2px;
+}
+
+.top-finance strong { font-size: 20px; }
+.top-finance span { white-space: nowrap; }
+.top-finance button { padding: 5px 8px; font-size: 9px; }
+
+.month-tasks-empty {
+  margin: 14px 0;
+  padding: 14px 10px;
+  border-radius: 12px;
+  background: #fff3f8;
+  color: var(--muted);
+  font-size: 11px;
+  text-align: center;
+}
+
+@media (max-width: 1250px) {
+  .top-finance {
+    order: 4;
+    width: 100%;
+    grid-template-columns: auto auto 1fr auto;
+    align-items: center;
+    gap: 10px;
+  }
+  .top-finance strong { font-size: 18px; }
+}
+
+@media (max-width: 720px) {
+  .top-finance { grid-template-columns: 1fr auto; }
+  .top-finance span,
+  .top-finance button { grid-column: 1 / -1; }
+}

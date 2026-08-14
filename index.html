@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="fixes.css">
   <link rel="stylesheet" href="public.css">
+  <link rel="stylesheet" href="month-view.css">
   <style>[hidden]{display:none!important}</style>
 </head>
 <body class="logged-out">
@@ -27,6 +28,7 @@
     <section class="main">
       <header>
         <div class="nav"><button id="prev">‹</button><button id="next">›</button><h1 id="monthTitle"></h1><button id="today">Сегодня</button></div>
+        <div class="money top-finance" id="financePanel" hidden><small id="financeTitle">Сумма за месяц</small><strong id="debtTotal">Br 0</strong><span id="debtCaption"></span><button id="showDebt2">Неоплаченные</button></div>
         <div class="header-actions"><button id="homeworkTop" hidden>＋ Домашнее задание</button><button class="login-top" id="loginTop">Войти</button></div>
         <div class="clocks"><span><small id="zoneLabel"></small><b id="localClock"></b></span><button id="zoneMinus">−</button><button id="zonePlus">＋</button><em></em><span><small>Москва · MSK</small><b id="mskClock"></b></span></div>
       </header>
@@ -38,7 +40,6 @@
       <p class="eyebrow">ДОМАШНИЕ ЗАДАНИЯ</p>
       <div id="taskList" class="task-list"></div>
       <button class="text-btn" id="addTask2">＋ Добавить задание</button>
-      <div class="money" id="financePanel" hidden><small id="financeTitle">Сумма за месяц</small><strong id="debtTotal">Br 0</strong><span id="debtCaption"></span><button id="showDebt2">Посмотреть неоплаченные</button></div>
     </aside>
   </main>
   <div class="overlay hidden" id="overlay"><section class="modal"><button class="close" id="closeModal">×</button><div id="modalContent"></div></section></div>
